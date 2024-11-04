@@ -1,5 +1,6 @@
+import React from "react";
 import { User, Message } from "../ChatArea";
-import styles from "./styles.module.css";
+import styles from "./MessageClient.module.css";
 
 /* interface User {
     id: string;
@@ -18,7 +19,7 @@ interface MessageClientProps {
     sender: User;
 }
 
-export default function MessageOthers({ message, sender }: MessageClientProps) {
+export function MessageClient({ message, sender }: MessageClientProps) {
     return (
         <div className={styles.container}>
             <div className={styles.message}>

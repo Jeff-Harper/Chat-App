@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
-import styles from "./styles.module.css";
+import React from "react";
+import styles from "./SidebarContainer.module.css";
 
 type SidebarContainerProps = {
-    children?: ReactNode;
+    children?: React.ReactNode;
 };
 
-export default function SidebarContainer({ children }: SidebarContainerProps) {
+export function SidebarContainer({ children }: SidebarContainerProps) {
     return <div className={styles.container}>{children}</div>;
 }

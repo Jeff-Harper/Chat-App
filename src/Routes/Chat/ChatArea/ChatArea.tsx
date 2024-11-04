@@ -1,10 +1,10 @@
+import React, { useState } from "react";
+import { WorkAreaContainer } from "../../../Components/WorkAreaContainer/WorkAreaContainer";
+import { SmallBox } from "../../../Components/Box/SmallBox";
+import styles from "./ChatArea.module.css";
 import { IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
-import styles from "./styles.module.css";
-import { ReactNode, useState } from "react";
-import { SmallBox } from "../../../Components/Box/SmallBox";
-import WorkAreaContainer from "../../../Components/WorkAreaContainer/WorkAreaContainer";
 
 export interface User {
     id: string;
@@ -27,7 +27,7 @@ export interface Message {
 } */
 
 interface ChatAreaProps {
-    children?: ReactNode;
+    children?: React.ReactNode;
     chatId: string;
     title: string;
     iconURL: string;
@@ -35,7 +35,7 @@ interface ChatAreaProps {
     messages: Message[];
 }
 
-export default function ChatArea({ title, children }: ChatAreaProps) {
+export function ChatArea({ title, children }: ChatAreaProps) {
     const [message, setMessage] = useState("");
 
     console.log("Rendering ChatArea");

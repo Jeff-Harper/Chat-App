@@ -1,15 +1,15 @@
-import { ButtonHTMLAttributes, memo } from "react";
-import styles from "./styles.module.css";
+import React from "react";
+import styles from "./Button.module.css";
 
 type WithRequired<T, K extends keyof T> = T & { [P in K]-?: T[P] };
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     children?: string;
     size: "small" | "medium" | "large";
     variant?: "wide";
 }
 
-export const Button = memo(function Button({
+export function Button({
     children,
     size,
     variant,
@@ -24,4 +24,4 @@ export const Button = memo(function Button({
             {children}
         </button>
     );
-});
+}

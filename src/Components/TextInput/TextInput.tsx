@@ -1,4 +1,5 @@
-import styles from "./styles.module.css";
+import React from "react";
+import styles from "./TextInput.module.css";
 
 type WithRequired<T, K extends keyof T> = T & { [P in K]-?: T[P] };
 
@@ -8,7 +9,7 @@ interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     valueCallback?: (data: string) => void;
 }
 
-export default function TextInput({
+export function TextInput({
     id,
     name,
     label,

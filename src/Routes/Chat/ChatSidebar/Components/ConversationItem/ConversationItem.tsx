@@ -1,4 +1,5 @@
-import styles from "./styles.module.css";
+import React from "react";
+import styles from "./ConversationItem.module.css";
 
 export type ConversationItemData = {
     name: String;
@@ -10,7 +11,7 @@ export interface ConversationItemProps {
     data: ConversationItemData;
 }
 
-export default function ConversationItem(props: ConversationItemProps) {
+export function ConversationItem(props: ConversationItemProps) {
     const data = props.data;
     return (
         <div className={styles.container}>

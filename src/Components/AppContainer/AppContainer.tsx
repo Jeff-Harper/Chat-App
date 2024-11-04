@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
-import styles from "./styles.module.css";
+import React from "react";
+import styles from "./AppContainer.module.css";
 
 type MainContainerProps = {
-    children?: ReactNode;
+    children?: React.ReactNode;
 };
 
 export function AppContainer({ children }: MainContainerProps) {

@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
-import styles from "./styles.module.css";
+import React from "react";
+import styles from "./Box.module.css";
 
 interface LargeBoxProps {
     flex?: "row" | "column";
-    children?: ReactNode;
+    children?: React.ReactNode;
 }
 
 export function LargeBox({ flex, children }: LargeBoxProps) {

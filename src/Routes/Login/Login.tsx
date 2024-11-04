@@ -2,18 +2,18 @@ import React from "react";
 import { AppContainer } from "../../Components/AppContainer/AppContainer";
 import { SidebarContainer } from "../../Components/SidebarContainer/SidebarContainer";
 import { WorkAreaContainer } from "../../Components/WorkAreaContainer/WorkAreaContainer";
-import { UsersSidebar } from "./UsersSidebar/UsersSidebar";
-import { UsersList } from "./UsersList/UsersList";
-import styles from "./Users.module.css";
+import { LoginSidebar } from "./LoginSidebar/LoginSidebar";
+import { LoginForm } from "./LoginForm/LoginForm";
+import styles from "./Login.module.css";
 
-export function Users() {
+export function Login() {
     return (
         <AppContainer>
             <SidebarContainer>
-                <UsersSidebar />
+                <LoginSidebar />
             </SidebarContainer>
             <WorkAreaContainer>
-                <UsersList />
+                <LoginForm />
             </WorkAreaContainer>
         </AppContainer>
     );

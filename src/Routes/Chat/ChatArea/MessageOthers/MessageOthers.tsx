@@ -1,5 +1,6 @@
+import React from "react";
 import { User, Message } from "../ChatArea";
-import styles from "./styles.module.css";
+import styles from "./MessageOthers.module.css";
 
 /* interface User {
     id: string;
@@ -18,7 +19,7 @@ interface MessageOthersProps {
     sender: User;
 }
 
-export default function MessageOthers({ message, sender }: MessageOthersProps) {
+export function MessageOthers({ message, sender }: MessageOthersProps) {
     return (
         <div className={styles.container}>
             <div className={styles.icon}>{sender.displayName[0]}</div>

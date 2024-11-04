@@ -1,8 +1,9 @@
+import React from "react";
 import { LargeBox } from "../../../Components/Box/LargeBox";
-import WorkAreaContainer from "../../../Components/WorkAreaContainer/WorkAreaContainer";
-import styles from "./styles.module.css";
+import { WorkAreaContainer } from "../../../Components/WorkAreaContainer/WorkAreaContainer";
+import styles from "./Welcome.module.css";
 
-export default function Welcome() {
+export function Welcome() {
     return (
         <WorkAreaContainer>
             <LargeBox>

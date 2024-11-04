@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
-import styles from "./styles.module.css";
+import React from "react";
+import styles from "./WorkAreaContainer.module.css";
 
 type WorkAreaContainerProps = {
-    children?: ReactNode;
+    children?: React.ReactNode;
 };
 
 export function WorkAreaContainer({ children }: WorkAreaContainerProps) {

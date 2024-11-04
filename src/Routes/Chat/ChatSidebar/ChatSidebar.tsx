@@ -1,16 +1,16 @@
+import React, { useState } from "react";
+import { SidebarContainer } from "../../../Components/SidebarContainer/SidebarContainer";
+import { LargeBox } from "../../../Components/Box/LargeBox";
+import { SmallBox } from "../../../Components/Box/SmallBox";
+import { ConversationItem } from "./Components/ConversationItem/ConversationItem";
+import styles from "./ChatSidebar.module.css";
 import { IconButton } from "@mui/material";
-import styles from "./styles.module.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import NightlightIcon from "@mui/icons-material/Nightlight";
 import SearchIcon from "@mui/icons-material/Search";
-import { useState } from "react";
-import ConversationItem from "./Components/ConversationItem/ConversationItem";
-import { SmallBox } from "../../../Components/Box/SmallBox";
-import { LargeBox } from "../../../Components/Box/LargeBox";
-import SidebarContainer from "../../../Components/SidebarContainer/SidebarContainer";
 
 const testConversationsData = [
     {
@@ -30,7 +30,7 @@ const testConversationsData = [
     },
 ];
 
-export default function ChatSidebar() {
+export function ChatSidebar() {
     const [conversations, setConversations] = useState(testConversationsData);
 
     console.log("Rendering Sidebar");

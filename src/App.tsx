@@ -1,12 +1,13 @@
-import ChatApp from "./Routes/ChatApp";
+import React from "react";
+import { Chat } from "./Routes/Chat";
+import { Login } from "./Routes/Login/Login";
+import { Groups } from "./Routes/Groups/Groups";
 import "./App.css";
-import Login from "./Routes/Login";
-import Groups from "./Routes/Groups/Groups";
 
 function App() {
     return (
         <div className="App">
-            {/* <ChatApp /> */}
+            {/* <Chat /> */}
             {/* <Login /> */}
             <Groups />
         </div>

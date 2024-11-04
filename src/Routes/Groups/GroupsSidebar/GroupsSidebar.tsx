@@ -1,4 +1,6 @@
 import React from "react";
+import { LargeBox } from "../../../Components/Box/LargeBox";
+import { SmallBox } from "../../../Components/Box/SmallBox";
 import styles from "./GroupsSidebar.module.css";
 import { IconButton } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
@@ -7,8 +9,6 @@ import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import NightlightIcon from "@mui/icons-material/Nightlight";
 import SearchIcon from "@mui/icons-material/Search";
-import { SmallBox } from "../../../Components/Box/SmallBox";
-import { LargeBox } from "../../../Components/Box/LargeBox";
 
 export function GroupsSidebar() {
     return (

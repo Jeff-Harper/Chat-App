@@ -1,12 +1,13 @@
-import ChatArea from "./ChatArea/ChatArea";
-import ChatMessageField from "./ChatArea/ChatMessageField/ChatMessageField";
+import React from "react";
 import { AppContainer } from "../../Components/AppContainer/AppContainer";
-import ChatSidebar from "./ChatSidebar/ChatSidebar";
+import { ChatMessageField } from "./ChatArea/ChatMessageField/ChatMessageField";
+import { ChatArea } from "./ChatArea/ChatArea";
+import { ChatSidebar } from "./ChatSidebar/ChatSidebar";
 import { exampleChatA } from "../../data/testData";
-import Welcome from "./Welcome/Welcome";
-import CreateGroup from "./CreateGroup/CreateGroup";
+import { Welcome } from "./Welcome/Welcome";
+import { CreateGroup } from "./CreateGroup/CreateGroup";
 
-export default function ChatApp() {
+export function Chat() {
     return (
         <AppContainer>
             <ChatSidebar />

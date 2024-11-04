@@ -1,8 +1,9 @@
+import React from "react";
 import { LargeBox } from "../../../../Components/Box/LargeBox";
 import { Message, User } from "../ChatArea";
-import MessageClient from "../MessageClient/MessageClient";
-import MessageOthers from "../MessageOthers/MessageOthers";
-import styles from "./styles.module.css";
+import { MessageClient } from "../MessageClient/MessageClient";
+import { MessageOthers } from "../MessageOthers/MessageOthers";
+import styles from "./ChatMessageField.module.css";
 
 const client = {
     id: "a",
@@ -15,10 +16,7 @@ interface ChatMessageFieldProps {
     messages: Message[];
 }
 
-export default function ChatMessageField({
-    users,
-    messages,
-}: ChatMessageFieldProps) {
+export function ChatMessageField({ users, messages }: ChatMessageFieldProps) {
     console.log("Rendering ChatMessageField");
 
     return (
