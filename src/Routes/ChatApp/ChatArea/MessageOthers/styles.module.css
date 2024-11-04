@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: lightblue;
+    width: fit-content;
+    max-width: 300px;
+}
+
+.sender {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.messageText {
+    font-size: 1rem;
+    white-space: break-spaces;
+    overflow-wrap: break-word;
+    overflow: auto;
+}
+
+.timeStamp {
+    font-size: 0.6rem;
+}

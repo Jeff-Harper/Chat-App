@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputContainer > input {
+    flex-grow: 1;
+    margin-inline: 10px;
+    outline-width: 0;
+    border: none;
+}

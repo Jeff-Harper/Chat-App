@@ -1,0 +1,8 @@
+:root {
+    --primary-color: black;
+    --secondary-color: rgb(181, 181, 181);
+    --background-color: white;
+
+    --font-size-400: 1.25rem;
+    --font-size-200: 0.8rem;
+}

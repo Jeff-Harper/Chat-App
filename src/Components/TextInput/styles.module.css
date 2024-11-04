@@ -1,0 +1,52 @@
+@import url(../../Styles/root.css);
+
+.inputBox {
+    position: relative;
+    width: 250px;
+    margin: 15px 0;
+}
+.inputBox input {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--background-color);
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    font-size: var(--font-size-400);
+    transition: 350ms;
+}
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    transform: translateX(10px) translateY(-7px);
+    font-size: var(--font-size-200);
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+    border-left: 1px solid var(--secondary-color);
+    border-right: 1px solid var(--secondary-color);
+    padding: 0 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: 350ms;
+}
+.inputBox input:placeholder-shown ~ span {
+    color: var(--secondary-color);
+    border-left: 1px solid var(--secondary-color);
+    border-right: 1px solid var(--secondary-color);
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+    color: var(--primary-color);
+    border-left: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+}
+.inputBox input:placeholder-shown {
+    border: 1px solid var(--secondary-color);
+}
+.inputBox input:valid,
+.inputBox input:focus {
+    border: 1px solid var(--primary-color);
+}
