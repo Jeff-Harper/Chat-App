@@ -1,52 +1,110 @@
 @import url(../../Styles/root.css);
 
-.inputBox {
-    position: relative;
-    width: 250px;
-    margin: 15px 0;
+.container {
+  position: relative;
+  width: fit-content;
+  margin: 10px 0;
 }
-.inputBox input {
-    width: 100%;
-    padding: 20px;
-    border: 1px solid var(--secondary-color);
-    background-color: var(--background-color);
-    border-radius: 5px;
-    outline: none;
-    color: black;
-    font-size: var(--font-size-400);
-    transition: 350ms;
+.container:has(input[data-width="wide"]) {
+  width: 100%;
 }
-.inputBox span {
-    position: absolute;
-    left: 0;
-    padding: 10px;
-    pointer-events: none;
-    transform: translateX(10px) translateY(-7px);
-    font-size: var(--font-size-200);
-    color: var(--secondary-color);
-    background-color: var(--background-color);
-    border-left: 1px solid var(--secondary-color);
-    border-right: 1px solid var(--secondary-color);
-    padding: 0 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    transition: 350ms;
+
+.label {
+  left: 0;
+  padding: 10px 0;
+  pointer-events: none;
+  font-size: var(--font-size-200);
+  font-weight: 600;
+  color: var(--primary-clr);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: 350ms;
 }
-.inputBox input:placeholder-shown ~ span {
-    color: var(--secondary-color);
-    border-left: 1px solid var(--secondary-color);
-    border-right: 1px solid var(--secondary-color);
+
+.TextInput {
+  display: flex;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-clr);
+  background-color: var(--background-clr);
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: var(--font-size-400);
+  outline: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: hsl(var(--foreground-clr));
+  font-weight: 500;
+  max-width: 30rem;
+  padding-left: 0.5rem;
 }
-.inputBox input:valid ~ span,
-.inputBox input:focus ~ span {
-    color: var(--primary-color);
-    border-left: 1px solid var(--primary-color);
-    border-right: 1px solid var(--primary-color);
+.TextInput[data-variant="filled"] {
+  border: 0 solid var(--border-clr);
+  background-color: rgb(243, 243, 243);
 }
-.inputBox input:placeholder-shown {
-    border: 1px solid var(--secondary-color);
+.TextInput[type="search"]::-webkit-search-decoration,
+.TextInput[type="search"]::-webkit-search-cancel-button,
+.TextInput[type="search"]::-webkit-search-results-button,
+.TextInput[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
 }
-.inputBox input:valid,
-.inputBox input:focus {
-    border: 1px solid var(--primary-color);
+
+/* .TextInput:hover {
+} */
+/* .TextInput:hover ~ span {
+} */
+
+.dirty {
+  background-color: red;
+}
+
+.TextInput:focus {
+  color: var(--foreground-clr);
+}
+/* .TextInput:focus ~ span {
+} */
+
+.TextInput:-webkit-autofill {
+  background-color: var(--background-clr);
+}
+.TextInput:-webkit-autofill ~ span {
+  background-color: var(--background-clr);
+}
+
+.TextInput::placeholder {
+  color: var(--muted-foreground-clr);
+}
+/* .TextInput::placeholder ~ span { 
+} */
+
+.TextInput:focus-visible {
+  outline: none;
+  border-color: var(--ring-clr);
+  box-shadow: 0 0 0 2px var(--ring-clr);
+}
+.TextInput:focus-visible ~ span {
+  border-left: 3px solid var(--ring-clr);
+  border-right: 3px solid var(--ring-clr);
+}
+
+.TextInput:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.TextInput:disabled ~ span {
+  opacity: 0.5;
+}
+
+.passwordButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  margin-right: 0.5rem;
+  z-index: 2;
 }

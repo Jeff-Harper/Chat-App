@@ -1,45 +1,21 @@
 .smallBox,
 .largeBox {
-    overflow: auto;
-    padding: 15px 10px;
-    border-radius: 10px;
-    background-color: white;
+  overflow: auto;
+  padding: 15px 10px;
+  border-radius: 10px;
+  background-color: white;
 }
 & .smallBox {
-    min-height: fit-content;
+  min-height: fit-content;
 }
 & .largeBox {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
-.innerContainer,
-.innerContainerFlexRow,
-.innerContainerFlexColumn {
-    height: 100%;
-    border-radius: 10px;
-    overflow-y: scroll;
+.flexrow,
+.flexcolumn {
+  display: flex;
 }
-&::-webkit-scrollbar-thumb {
-    background-color: lightgray;
-    border-radius: 10px;
-}
-&::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-&::-webkit-scrollbar {
-    width: 8px;
-    height: 4px;
-    background-color: transparent;
-}
-
-.innerContainerFlexRow,
-.innerContainerFlexColumn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.innerContainerFlexColumn {
-    flex-direction: column;
+.flexcolumn {
+  flex-direction: column;
 }

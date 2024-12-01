@@ -1,27 +1,26 @@
 import React from "react";
 import styles from "./Button.module.css";
 
-type WithRequired<T, K extends keyof T> = T & { [P in K]-?: T[P] };
-
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    children?: string;
-    size: "small" | "medium" | "large";
-    variant?: "wide";
+  children?: React.ReactNode;
+  size?: "small" | "large" | "icon";
+  variant?: "destructive" | "outline" | "secondary" | "ghost" | "link" | "icon";
 }
 
-export function Button({
-    children,
-    size,
-    variant,
-    ...rest
-}: WithRequired<ButtonProps, "size">) {
-    let classList = styles.button;
-    if (size) classList += " " + styles[size];
-    if (variant) classList += " " + styles[variant];
-
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, size, variant, className, ...props }, ref) => {
     return (
-        <button className={classList} {...rest}>
-            {children}
-        </button>
+      <button
+        data-size={size}
+        data-variant={variant}
+        className={`${styles.Button} ${className ? className : ""}`}
+        ref={ref}
+        {...props}
+      >
+        {children}
+      </button>
     );
-}
+  }
+);
+
+export { Button };

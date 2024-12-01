@@ -1,0 +1,14 @@
+.header,
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.conversations {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+.conversations > ul {
+  padding-inline-start: 0;
+}

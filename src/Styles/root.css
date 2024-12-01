@@ -1,8 +1,42 @@
 :root {
-    --primary-color: black;
-    --secondary-color: rgb(181, 181, 181);
-    --background-color: white;
+  /* color */
+  --primary-clr: black;
+  --secondary-clr: rgb(181, 181, 181);
+  --accent-clr: green;
 
-    --font-size-400: 1.25rem;
-    --font-size-200: 0.8rem;
+  --foreground-clr: black;
+  --secondary-foreground-clr: lightgray;
+  --accent-foreground-clr: gray;
+
+  --background-clr: white;
+  --secondary-background-clr: blue;
+  --accent-background-clr: magenta;
+
+  --destructive-clr: red;
+  --destructive-foreground-clr: pink;
+
+  --border-clr: black;
+  --muted-foreground-clr: lightgray;
+  --ring-clr: aquamarine;
+
+  /* font size */
+  --font-size-100: 0.5rem;
+  --font-size-200: 0.75rem;
+  --font-size-300: 0.875rem;
+  --font-size-400: 1rem;
+  --font-size-500: 1.25rem;
+  --font-size-600: 1.5rem;
+  --font-size-700: 2rem;
+  --font-size-800: 3rem;
+  --font-size-900: 4rem;
+
+  /* font style */
+  --font-style-primary: sans-serif;
+  --font-style-secondary: sans-serif;
+  --font-style-accent: sans-serif;
+
+  /* border */
+  --border-radius-sm: 2px;
+  --border-radius-md: 5px;
+  --border-radius-lg: 10px;
 }
